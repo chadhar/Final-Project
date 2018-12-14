@@ -18,7 +18,7 @@ Rajat Chadha
 # Monte Carlo Simulation Scenario & Purpose:
 Rasch Model (Rasch, 1960; 1981) is a probabilistic psychometric item response model used to create interval-level measures from categorical data, such as persons’ answers to items on an exam. Rasch Model is used in education, health professions, and market research.
 
-In measurement, our intent is to use numbers to indicate "more" or "less" of the trait that is presumed to be homogeneous. Using the Rasch Model we can investigate if the data conforms to this homogeneity. Rasch modelling is a unique approach of mathematical modeling based upon a latent trait and accomplishes stochastic (probabilistic) conjoint additivity (conjoint means measurement of persons and items on the same scale and additivity is the equal-interval property of the scale) (Granger, 2008). For more information please visit: https://www.rasch.org/rmt/rmt213d.htm.
+In measurement, the intent is to use numbers to indicate "more" or "less" of the trait that is presumed to be homogeneous. Using the Rasch Model we can investigate if the data conforms to this homogeneity. Rasch modelling is a unique approach of mathematical modeling based upon a latent trait and accomplishes stochastic (probabilistic) conjoint additivity (conjoint means measurement of persons and items on the same scale and additivity is the equal-interval property of the scale) (Granger, 2008). For more information please visit: https://www.rasch.org/rmt/rmt213d.htm.
 
 The probability of a correct answer by a person on an item is modelled as a function of the difference in the person and item locations on measurement scale.
 
@@ -30,9 +30,9 @@ This project aims to develop a Python program to assess the distributional prope
 List and describe your simulation's variables of uncertainty (where you're using pseudo-random number generation). For each such variable, how did you decide the range and probability distribution to use?  Do you think it's a good representation of reality?
 
 Person measures: Person measures were pseudo-randomly selected from a normally-distributed population with mean = 0 logits
-and standard deviation = 1 logit. Normal distribution was selected because person measures are usually normally distributed. Moreover, this program can be easily modified for a uniform distribution of person measures.
+and standard deviation = 1 logit. Normal distribution was selected because person measures are usually normally distributed. Moreover, this program can be easily modified for a uniform distribution of person measures, if needed.
 
-Item locations: Pseudo-random sample of item locations from a uniformly-distributed population ranging from -2.0 to 2.0 logits. Uniform distribution was selected because it is desirable to have a set of items on an exam that follow uniform distribution to adequately measure most of the persons with similar precision. 
+Item locations: Pseudo-random sample of item locations from a uniformly-distributed population ranging from -2.0 to 2.0 logits. Uniform distribution was selected because it is desirable to have a set of items on an exam that follow uniform distribution to adequately measure most of the persons with similar precision. As with person measure distribution, it can be easily modified if needed.
 
 Replication sample: A pseudo-random sample numpy array with the size [n_persons, n_items].
 n_persons*n_items samples are drawn from a uniformly distributed population in range 0.0001 to <1.0.
@@ -48,7 +48,7 @@ Mean = 0;
 SD = 1
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
-The standardized outfit statistics seem to converge to the hypothesized values. I ran multiple replications and am attaching results from two simulations: one with 45 items, 500 persons, and 10000 replications; and second with 50 items, 1500 persons, and 100000 replications. For my research, I will also review how the distribution of the standardized outfit statistic changes with different item locations. This is beyond the scope of this particular project. 
+The standardized outfit statistics seem to converge to the hypothesized values. I ran multiple replications and am attaching results from two simulations: one with 45 items, 500 persons, and 10000 replications; and second with 50 items, 1500 persons, and 100000 replications. For my research, I will also review how the distribution of the standardized outfit statistic changes with different distribution and mean item locations. This is beyond the scope of this  project. 
 
 ## Instructions on how to use the program:
 Run the program and input number of items (suggested between 10 and 50), number of persons (suggested between 500 to 2000), number of replications (suggestion 100 to 100000). The program generates: 1) a csv file with item locations, 2) a csv file with person locations, 3) a csv files with summary statistics, and 4) histograms with one plot saved in the directory for each item.
