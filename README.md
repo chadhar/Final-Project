@@ -48,7 +48,7 @@ Mean = 0;
 SD = 1
 
 ## Analytical Summary of your findings: (e.g. Did you adjust the scenario based on previous simulation outcomes?  What are the management decisions one could make from your simulation's output, etc.)
-The standardized outfit statistics seem to converge to the hypothesized values. I ran multiple replications and am attaching results from two simulations: one with 45 items, 500 persons, and 10000 replications; and second with 50 items, 1500 persons, and 100000 replications. For my research, I will also review how the distribution of the standardized outfit statistic changes with different distribution and mean item locations. This is beyond the scope of this  project. 
+The standardized outfit statistics seem to converge to the hypothesized values. I ran multiple replications and am attaching results (csv files with the results and only one plot from each run of the program) from two simulations: one with 45 items, 500 persons, and 10000 replications; and second with 50 items, 1500 persons, and 100000 replications. For my research, I will also review how the distribution of the standardized outfit statistic changes with different distribution and mean item locations. This is beyond the scope of this  project. 
 
 ## Instructions on how to use the program:
 Run the program and input number of items (suggested between 10 and 50), number of persons (suggested between 500 to 2000), number of replications (suggestion 100 to 100000). The program generates: 1) a csv file with item locations, 2) a csv file with person locations, 3) a csv files with summary statistics, and 4) histograms with one plot saved in the directory for each item.
